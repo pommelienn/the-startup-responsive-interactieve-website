@@ -1,23 +1,215 @@
+:root{}  
+
+
+@font-face {
+    font-family: "Mondwest";
+    src: url("./fonts/Mondwest-Regular.ttf");
+ }
+ 
+ @font-face {
+    font-family: "Offbit";
+    src: url("./fonts/OffBit-101Bold.ttf");
+ }
+ 
+ @font-face {
+    font-family: "Antique Legacy Regular";
+    src: url("./fonts/Antique-Legacy-Regular.otf");
+ }
+ 
+ @font-face {
+    font-family: "Antique Legacy Light";
+    src: url("./fonts/Antique-Legacy-Light.otf");
+ }
+
+
+
+
 body{
     color: white;
     background-color: black;
+    font-family:arial;
+    font-size: 2em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr;
+    gap: 1em ;
+    grid-template-areas:
+    "header header header header "
+    "main main main main "
+    "footer footer footer footer "
+    ;
 }
+
+header{
+    grid-area: header;
+    padding-left: 1.5em;
+}
+
+
+main{
+    grid-area: main;
+    padding-left: 1.5em;
+}
+
+footer{
+    grid-area: footer;
+    padding-left: 1.5em;
+}
+
+
 svg{
     width: 4em;
 }
 
-img{
-    width: 15em;
+.logoklein{
+    width: 2em;
+}
 
+img{
+    width: 11em;
+    padding: 0.8em;
 }
 
 p{
-    font-family: ;
+    font-size: 0.8em; 
+}
+
+.textBlue{
+    color: 0064FF;
+    font-family: "Mondwest"; 
+}
+
+
+h1{
+    font-size: 1.3em;
 }
 
 h3{
     color: 0064FF;
 }
 
+li{
+    font-size: 0.7em;
+}
 
- 
+ul {list-style: none}
+
+li::before {
+    content: "•"; 
+    color: 0064FF;
+    left:1em; 
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em
+}
+
+button{
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: 0064FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.btn {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: 0064FF;
+}
+
+/* Style voor de inhoud van de modale popup */
+.btnContent {
+    background-color: 0064FF;
+    justify-content: center;
+    padding:1em ;
+    margin:1 em ;
+    text-align: center;
+
+}
+
+/* Stijl voor de sluitknop */
+.close {
+    color: white;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.beSquare:hover{
+    color:green;
+}
+
+a{
+    color: white;
+}
+
+
+label{
+    display: block;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+input{
+    height: 2em;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* button beSquare */
+
+.openSquare{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:0064FF;
+
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.contentSquare{
+    position: center;
+    top: 100%;
+    left: 100%;
+    background-color:0064FF;
+    padding:0;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 45em) {
+    body {
+      font-size: 3em;
+    }
+  }

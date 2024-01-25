@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'OffBit';
+    src: url('OffBit-101Bold.eot'); /* IE9 Compat Modes */
+    src: url('OffBit-101Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('OffBit-101Bold.woff') format('woff'), /* Modern Browsers */
+         url('OffBit-101Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('OffBit-101Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
